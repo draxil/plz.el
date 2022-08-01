@@ -112,7 +112,7 @@ Synchronously download a JPEG file, then create an Emacs image object from the d
 
    ~:as~ selects the kind of result to pass to the callback function ~:then~, or the kind of result to return for synchronous requests.  It may be:
 
-   -  ~'buffer~ to pass the response buffer.
+   -  ~​'buffer~ to pass the response buffer.
    -  ~'binary~ to pass the response body as an undecoded string.
    -  ~'string~ to pass the response body as a decoded string.
    -  ~'response~ to pass a ~plz-response~ struct.
