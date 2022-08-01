@@ -112,15 +112,15 @@ Synchronously download a JPEG file, then create an Emacs image object from the d
 
    ~:as~ selects the kind of result to pass to the callback function ~:then~, or the kind of result to return for synchronous requests.  It may be:
 
-   -  ~​'buffer~ to pass the response buffer.
-   -  ~'binary~ to pass the response body as an undecoded string.
-   -  ~'string~ to pass the response body as a decoded string.
-   -  ~'response~ to pass a ~plz-response~ struct.
+   -  ~'​buffer~ to pass the response buffer.
+   -  ~​'binary~ to pass the response body as an undecoded string.
+   -  ~​'string~ to pass the response body as a decoded string.
+   -  ~​'response~ to pass a ~plz-response~ struct.
    -  A function, to pass its return value; it is called in the response buffer, which is narrowed to the response body (suitable for, e.g. ~json-read~).
-   -  ~'file~ to store to the response body to a temporary file without decoding. The result will be the temp file name.
-   -  ~'(file FILENAME)~ to store the undecoded response to a file ~FILENAME~.  ~FILENAME~ must be a non-existent file; if it exists, it will not be overwritten, and an error will be signaled.
+   -  ~​'file~ to store to the response body to a temporary file without decoding. The result will be the temp file name.
+   -  ~​'(file FILENAME)~ to store the undecoded response to a file ~FILENAME~.  ~FILENAME~ must be a non-existent file; if it exists, it will not be overwritten, and an error will be signaled.
 
-   If ~:decode~ is non-nil, the response body is decoded automatically.  For binary content, it should be nil.  When ~:as~ is ~'binary~, ~:decode~ is automatically set to nil.
+   If ~:decode~ is non-nil, the response body is decoded automatically.  For binary content, it should be nil.  When ~:as~ is ~​'binary~, ~:decode~ is automatically set to nil.
 
    ~:then~ is a callback function, whose sole argument is selected above with ~:as~.  Or ~:then~ may be ~sync~ to make a synchronous request, in which case the result is returned directly.
 
